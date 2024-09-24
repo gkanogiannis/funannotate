@@ -21,7 +21,7 @@ RUN mamba create -c conda-forge -c bioconda -c defaults \
 
 # Since we want the most recent, install from repo, remove snap as broken
 SHELL ["conda", "run", "-n", "funannotate", "/bin/bash", "-c"]
-RUN python -m pip install git+https://github.com/nextgenusfs/funannotate.git
+RUN python -m pip install git+https://github.com/gkanogiannis/funannotate.git
 
 # package with conda-pack
 RUN conda-pack --ignore-missing-files -n funannotate -o /tmp/env.tar && \
